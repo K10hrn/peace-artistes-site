@@ -31,8 +31,6 @@
   --pa-border:    var(--pa-ink);
   --pa-form-bg:   #FFFFFF;
   --pa-grain:     rgba(0,0,0,0.035);   /* the body::before paper grain */
-}
-
 
   /* Type — IBM Plex Sans matches the original peaceartistes.com (Maywood theme).
      One family for both body and headings; we lean on weight (400 vs 700) for hierarchy. */
