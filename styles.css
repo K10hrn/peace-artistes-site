@@ -1,5 +1,5 @@
 /* =====================================================================
-   The Peace Artistes — draft redesign stylesheet
+   The Peace Artistes - draft redesign stylesheet
    Palette derived from the new logo. Comic/poster aesthetic.
    Edit freely; everything is plain CSS, no build step needed.
    ===================================================================== */
@@ -7,33 +7,33 @@
 :root {
   /* Brand palette pulled from the new logo.
      Two reds: bright accent (#E63027) for borders, badges, icons; deep red
-     (#C12219) for any surface that holds body text — meets WCAG AA. */
+     (#C12219) for any surface that holds body text - meets WCAG AA. */
   --pa-yellow:  #FBC81F;
   --pa-yellow-2:#FFE76B;     /* lighter yellow for hover/tints */
-  --pa-red:     #E63027;     /* bright accent red — DO NOT use as bg with white body text */
-  --pa-red-deep:#C12219;     /* deeper red — passes AA against white & yellow */
-  --pa-red-darker:#8A160F;   /* darkest red — hover states; ~9:1 on paper, ~9.5:1 with white */
-  --pa-blue:    #29A4D4;     /* bright blue — use with INK text only */
+  --pa-red:     #E63027;     /* bright accent red - DO NOT use as bg with white body text */
+  --pa-red-deep:#C12219;     /* deeper red - passes AA against white & yellow */
+  --pa-red-darker:#8A160F;   /* darkest red - hover states; ~9:1 on paper, ~9.5:1 with white */
+  --pa-blue:    #29A4D4;     /* bright blue - use with INK text only */
   --pa-green:   #4FB540;
   --pa-ink:     #1A1A1A;     /* near-black for body text + outlines */
   --pa-paper:   #FFF8E7;     /* warm off-white background */
   --pa-white:   #FFFFFF;
 
-  /* Theme tokens — these change in dark mode. Use these for body bg,
+  /* Theme tokens - these change in dark mode. Use these for body bg,
      body text, paper-bg sections, card surfaces, and "subtle" link colour.
      The bright brand sections (yellow hero, red quote, blue video, black gigs)
-     do NOT use these tokens — they stay vibrant in both modes. */
+     do NOT use these tokens - they stay vibrant in both modes. */
   --pa-bg:        var(--pa-paper);
   --pa-bg-soft:   var(--pa-paper);     /* card surface on paper sections */
   --pa-text:      var(--pa-ink);
   --pa-text-soft: rgba(26,26,26,0.7);  /* dim text on paper */
   --pa-link:      var(--pa-red-deep);
-  --pa-link-hov:  var(--pa-red-darker); /* darken links on hover — keeps feedback & passes AA (bright red was 4.1:1) */
+  --pa-link-hov:  var(--pa-red-darker); /* darken links on hover - keeps feedback & passes AA (bright red was 4.1:1) */
   --pa-border:    var(--pa-ink);
   --pa-form-bg:   #FFFFFF;
   --pa-grain:     rgba(0,0,0,0.035);   /* the body::before paper grain */
 
-  /* Type — IBM Plex Sans matches the original peaceartistes.com (Maywood theme).
+  /* Type - IBM Plex Sans matches the original peaceartistes.com (Maywood theme).
      One family for both body and headings; we lean on weight (400 vs 700) for hierarchy. */
   --font-display: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-body:    "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -120,7 +120,7 @@ a:focus-visible {
 .eyebrow + h3 { margin-top: 0; }
 .section-head .eyebrow { margin-bottom: 14px; }
 
-/* Stickers sitting on a yellow band (hero / page-hero) need contrast —
+/* Stickers sitting on a yellow band (hero / page-hero) need contrast -
    yellow-on-yellow reads poorly, so switch them to deep red with white text. */
 .hero .eyebrow,
 .page-hero .eyebrow { background: var(--pa-red-deep); color: #fff; }
@@ -186,7 +186,7 @@ section.tight { padding: 60px 0; }
 .site-logo img { display: block; height: 130px; width: auto; }
 @media (max-width: 880px) { .site-logo img { height: 80px; } }
 
-/* (unused — kept for the dark-mode wordmark text variant if ever re-enabled) */
+/* (unused - kept for the dark-mode wordmark text variant if ever re-enabled) */
 .site-logo .wordmark {
   display: inline-flex;
   flex-direction: column;
@@ -523,7 +523,7 @@ section.tight { padding: 60px 0; }
 .site-footer > .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
 .site-footer > .container .socials { justify-content: center; }
 .site-footer .legal { display: block; }
-.site-footer h2 { /* footer landmark heading (was h4 — promoted to avoid skipped heading levels) */
+.site-footer h2 { /* footer landmark heading (was h4 - promoted to avoid skipped heading levels) */
   color: var(--pa-yellow);
   font-family: var(--font-display);
   font-size: 1rem; letter-spacing: .1em; text-transform: uppercase;
@@ -560,7 +560,7 @@ section.tight { padding: 60px 0; }
 }
 
 /* =====================================================================
-   Inner-page layout — shared by Photos, Videos, Gigs, Bio, Testimonials,
+   Inner-page layout - shared by Photos, Videos, Gigs, Bio, Testimonials,
    Contact, HONK! pages.
    ===================================================================== */
 
@@ -982,7 +982,7 @@ section.tight { padding: 60px 0; }
   border: 3px solid var(--pa-ink);
   box-shadow: var(--shadow-card);
 }
-.contact-aside h2 { color: var(--pa-yellow); font-size: 1.4rem; } /* was h3 — promoted so Contact doesn't skip from h1 to h3 */
+.contact-aside h2 { color: var(--pa-yellow); font-size: 1.4rem; } /* was h3 - promoted so Contact doesn't skip from h1 to h3 */
 .contact-aside ul { list-style: none; margin: 0 0 18px; padding: 0; }
 .contact-aside li { margin-bottom: 10px; line-height: 1.4; }
 .contact-aside a { color: #fff; }
@@ -1014,7 +1014,7 @@ section.tight { padding: 60px 0; }
 .honk-banner > * { position: relative; z-index: 1; }
 .honk-banner h3 { color: var(--pa-yellow); font-size: 2rem; margin: 0 0 12px; }
 
-/* HONK! hero — two-column with iconic stage shot left, intro right */
+/* HONK! hero - two-column with iconic stage shot left, intro right */
 .honk-hero {
   background: var(--pa-ink);
   color: #fff;
@@ -1063,7 +1063,7 @@ section.tight { padding: 60px 0; }
   border: 0;
 }
 
-/* Skip link — invisible until focused, then pops above the header */
+/* Skip link - invisible until focused, then pops above the header */
 .skip-link {
   position: absolute;
   left: 12px; top: 12px;
