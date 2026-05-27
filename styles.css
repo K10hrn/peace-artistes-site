@@ -1098,3 +1098,14 @@ section.tight { padding: 60px 0; }
   .eyebrow,
   .about__badge { transform: none !important; }
 }
+
+/* ---------- per-page header colours ----------------------------------
+   Softer, page-specific colours for the top header band only. Scoped to a
+   body class so nothing else (nav, content, footer, HONK!) is affected.
+   Contact keeps the default brand yellow; HONK! keeps its own dark hero. */
+.page-home        .hero      { background: #FBEFD0; } /* cream  */
+.page-photos      .page-hero { background: #BFE3F2; } /* sky    */
+.page-videos      .page-hero { background: #F6CBC4; } /* blush  */
+.page-gigs        .page-hero { background: #C7E7BD; } /* sage   */
+.page-biography   .page-hero { background: #FBD9B8; } /* peach  */
+.page-testimonials .page-hero{ background: #DCD0F0; } /* lilac  */
