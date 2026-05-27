@@ -808,20 +808,20 @@ section.tight { padding: 60px 0; }
   border: 3px solid var(--pa-border);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-card-sm);
-  padding: 26px 28px;
+  padding: 48px 28px 26px;
   position: relative;
 }
 .testimonial-card::before {
   content: "\201C";
   font-family: var(--font-display);
-  font-size: 4rem;
+  font-size: 3.4rem;
   position: absolute;
-  top: -8px; left: 16px;
+  top: 12px; left: 24px;
   color: var(--pa-red-deep);
   line-height: 1;
 }
 .testimonial-card blockquote {
-  margin: 16px 0 18px;
+  margin: 0 0 18px;
   font-size: 1.05rem;
   line-height: 1.5;
 }
