@@ -12,6 +12,7 @@
   --pa-yellow-2:#FFE76B;     /* lighter yellow for hover/tints */
   --pa-red:     #E63027;     /* bright accent red — DO NOT use as bg with white body text */
   --pa-red-deep:#C12219;     /* deeper red — passes AA against white & yellow */
+  --pa-red-darker:#8A160F;   /* darkest red — hover states; ~9:1 on paper, ~9.5:1 with white */
   --pa-blue:    #29A4D4;     /* bright blue — use with INK text only */
   --pa-green:   #4FB540;
   --pa-ink:     #1A1A1A;     /* near-black for body text + outlines */
@@ -27,7 +28,7 @@
   --pa-text:      var(--pa-ink);
   --pa-text-soft: rgba(26,26,26,0.7);  /* dim text on paper */
   --pa-link:      var(--pa-red-deep);
-  --pa-link-hov:  var(--pa-red);
+  --pa-link-hov:  var(--pa-red-darker); /* darken links on hover — keeps feedback & passes AA (bright red was 4.1:1) */
   --pa-border:    var(--pa-ink);
   --pa-form-bg:   #FFFFFF;
   --pa-grain:     rgba(0,0,0,0.035);   /* the body::before paper grain */
@@ -156,7 +157,7 @@ section.tight { padding: 60px 0; }
 .btn:active { transform: translate(0,2px); box-shadow: 0 2px 0 var(--pa-ink); }
 
 .btn--red    { background: var(--pa-red-deep); color: #fff; }
-.btn--red:hover { background: var(--pa-red); color: #fff; }
+.btn--red:hover { background: var(--pa-red-darker); color: #fff; } /* darken on hover; bright red gave 4.36:1 with white */
 .btn--blue   { background: var(--pa-blue);  color: var(--pa-ink); }
 .btn--white  { background: #fff; }
 .btn--ghost  { background: transparent; }
@@ -522,11 +523,12 @@ section.tight { padding: 60px 0; }
 .site-footer > .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
 .site-footer > .container .socials { justify-content: center; }
 .site-footer .legal { display: block; }
-.site-footer h4 {
+.site-footer h2 { /* footer landmark heading (was h4 — promoted to avoid skipped heading levels) */
   color: var(--pa-yellow);
   font-family: var(--font-display);
   font-size: 1rem; letter-spacing: .1em; text-transform: uppercase;
   margin-bottom: 12px;
+  line-height: 1.1;
 }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
 .site-footer li { margin-bottom: 6px; }
@@ -967,7 +969,7 @@ section.tight { padding: 60px 0; }
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  outline: 3px solid var(--pa-blue);
+  outline: 3px solid var(--pa-ink); /* ink (16:1) meets WCAG 1.4.11 focus contrast; blue was ~2.8:1 */
   outline-offset: 2px;
 }
 .contact-form textarea { min-height: 140px; resize: vertical; }
@@ -980,7 +982,7 @@ section.tight { padding: 60px 0; }
   border: 3px solid var(--pa-ink);
   box-shadow: var(--shadow-card);
 }
-.contact-aside h3 { color: var(--pa-yellow); }
+.contact-aside h2 { color: var(--pa-yellow); font-size: 1.4rem; } /* was h3 — promoted so Contact doesn't skip from h1 to h3 */
 .contact-aside ul { list-style: none; margin: 0 0 18px; padding: 0; }
 .contact-aside li { margin-bottom: 10px; line-height: 1.4; }
 .contact-aside a { color: #fff; }
