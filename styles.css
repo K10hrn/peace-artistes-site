@@ -119,6 +119,11 @@ a:focus-visible {
 .eyebrow + h3 { margin-top: 0; }
 .section-head .eyebrow { margin-bottom: 14px; }
 
+/* Stickers sitting on a yellow band (hero / page-hero) need contrast —
+   yellow-on-yellow reads poorly, so switch them to deep red with white text. */
+.hero .eyebrow,
+.page-hero .eyebrow { background: var(--pa-red-deep); color: #fff; }
+
 /* ---------- layout helpers ------------------------------------------- */
 
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
