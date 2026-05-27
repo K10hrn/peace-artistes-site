@@ -1,3 +1,6 @@
 
 # Local design preview scratch files — keep out of the repo/live site
 mockup-*.html
+
+# Local Claude settings — not part of the site
+.claude/

@@ -186,37 +186,6 @@ section.tight { padding: 60px 0; }
 .site-logo img { display: block; height: 130px; width: auto; }
 @media (max-width: 880px) { .site-logo img { height: 80px; } }
 
-/* (unused - kept for the dark-mode wordmark text variant if ever re-enabled) */
-.site-logo .wordmark {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 0.95;
-  font-family: var(--font-display);
-}
-.site-logo .wm-top {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  color: var(--pa-text);
-  margin-bottom: 4px;
-}
-.site-logo .wm-main {
-  font-size: 1.7rem;
-  letter-spacing: 0.02em;
-  color: var(--pa-red-deep);
-  text-shadow: 2px 2px 0 var(--pa-yellow);
-}
-.site-logo .wm-bot {
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  color: var(--pa-text);
-  margin-top: 6px;
-}
-@media (max-width: 880px) {
-  .site-logo .wm-main { font-size: 1.3rem; }
-  .site-logo .wm-top, .site-logo .wm-bot { font-size: 0.65rem; }
-}
-
 .site-nav ul {
   display: flex; gap: 4px;
   list-style: none; margin: 0; padding: 0;
@@ -549,15 +518,6 @@ section.tight { padding: 60px 0; }
 }
 .site-footer .socials a:hover { background: var(--pa-yellow); color: var(--pa-ink); border-color: var(--pa-yellow); }
 @media (max-width: 880px) { .site-footer > .container { grid-template-columns: 1fr; } }
-
-/* ---------- generic placeholder note for review ---------------------- */
-
-.placeholder-note {
-  font-family: var(--font-display);
-  font-size: .78rem;
-  letter-spacing: .08em;
-  opacity: .85;
-}
 
 /* =====================================================================
    Inner-page layout - shared by Photos, Videos, Gigs, Bio, Testimonials,
