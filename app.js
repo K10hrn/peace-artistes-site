@@ -40,9 +40,12 @@
     im.tabIndex = 0;
     im.setAttribute('role', 'button');
     if (im.alt) im.setAttribute('aria-label', 'Expand photo: ' + im.alt);
-    im.addEventListener('click', function () { open(im.currentSrc || im.src, im.alt); });
+    // Short visual caption: data-caption if set, otherwise fall back to alt.
+    // Keeps alt rich for screen readers while letting the lightbox show a punchy line.
+    var cap = im.dataset.caption || im.alt;
+    im.addEventListener('click', function () { open(im.currentSrc || im.src, cap); });
     im.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(im.currentSrc || im.src, im.alt); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(im.currentSrc || im.src, cap); }
     });
   });
 
